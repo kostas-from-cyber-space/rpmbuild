@@ -18,7 +18,7 @@ Source0: https://github.com/Sneeds-Feed-and-Seed/%{name}/archive/%{commit0}/%{na
 
 %define tartopdir sneedacity-%{commit0}
 
-Source1: http://www.fosshub.com/Audacity.html/audacity-manual-3.0.2.zip
+Source1: https://www.fosshub.com/Audacity.html/audacity-manual-3.0.2.zip
 
 Patch0: system-wx.patch
 
