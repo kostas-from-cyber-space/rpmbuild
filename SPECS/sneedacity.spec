@@ -20,14 +20,6 @@ Source0: https://github.com/Sneeds-Feed-and-Seed/%{name}/archive/%{commit0}/%{na
 
 Source1: https://www.fosshub.com/Audacity.html/audacity-manual-3.0.2.zip
 
-Patch0: system-wx.patch
-
-# Fix CMake find of the Jack module (RHBZ 1972963) - Remove for 3.0.3 (backported from master branch - https://github.com/audacity/audacity/commit/b4b5cc812483b311627bba48e26b91ae389ce713)
-Patch1: find-jack.patch
-
-# Fix CVE-2020-1867 - Remove for 3.0.3 (backported from https://github.com/audacity/audacity/pull/700)
-Patch2: permissions-fix.patch
-
 BuildRequires: cmake
 BuildRequires: gettext-devel
 
@@ -114,12 +106,6 @@ For the most up to date manual content, use the on-line manual.
 
 %prep
 %setup -q -n %{tartopdir}
-
-%patch0 -p0
-
-# Remove both for 3.0.3
-%patch1 -p1
-%patch2 -p0
 
 %build
 %if 0%{?rhel} == 7
